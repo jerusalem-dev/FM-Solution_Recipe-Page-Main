@@ -1,0 +1,167 @@
+:root {
+  --ff-heading: "Young Serif", serif;
+  --ff-text: "Outfit", sans-serif;
+
+  --bgc-body: hsl(30, 54%, 90%);
+  --bgc-card: hsl(0, 0%, 100%);
+  --bgc-card__preptime: hsl(330, 100%, 98%);
+
+  --clr-text: hsl(24, 5%, 18%);
+
+  --accent-primary: hsl(14, 45%, 36%);
+  --accent-card__preptime: hsl(332, 51%, 32%);
+  --accent-line: hsl(30, 18%, 87%);
+
+  --base-unit: 1em;
+}
+
+/* General Styling */
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin-block-end: 0;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+  margin: 0;
+
+  font-family: var(--ff-text);
+  color: var(--clr-text);
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+
+h1,
+h2 {
+  font-family: var(--ff-heading);
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+hr {
+  margin-top: calc(var(--base-unit) * 1.5);
+  border: 1px solid var(--accent-line);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Utility */
+
+.bold-text {
+  font-weight: 700;
+}
+
+.flex {
+  display: flex;
+  gap: calc(var(--base-unit) * 1.5);
+}
+
+/* Component */
+
+.card {
+  background-color: var(--bgc-card);
+}
+
+.card__text {
+  padding: 0 calc(var(--base-unit) * 1.8) calc(var(--base-unit) * 1.8);
+}
+
+.card__intro__preptime .card__list-item__marker,
+.card__ingredients .card__list-item__marker {
+  width: calc(var(--base-unit) * 0.25);
+  height: calc(var(--base-unit) * 0.25);
+  margin-top: var(--base-unit);
+  border-radius: 100%;
+
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.card__intro__preptime .card__list-item__marker {
+  background-color: var(--accent-card__preptime);
+}
+
+.card__ingredients .card__list-item__marker {
+  background-color: var(--accent-primary);
+}
+
+.card__instructions .card__list-item__marker {
+  color: var(--accent-primary);
+}
+
+.card h2,
+.card__nutrition span {
+  color: var(--accent-primary);
+}
+
+.card__intro__preptime {
+  margin-top: var(--base-unit);
+  padding: var(--base-unit) calc(var(--base-unit) * 2);
+  border-radius: calc(var(--base-unit) / 1.5);
+  background-color: var(--bgc-card__preptime);
+}
+
+.card__intro__preptime h3 {
+  color: var(--accent-card__preptime);
+}
+
+.card__nutrition div p {
+  width: 100%;
+}
+
+.attribution {
+  font-size: 0.7rem;
+  text-align: center;
+  padding-bottom: calc(var(--base-unit) / 2);
+}
+.attribution a {
+  color: var(--clr-text);
+}
+
+.attribution a:hover,
+.attribution a:focus {
+  color: var(--accent-card__preptime);
+}
+
+@media (min-width: 40em) {
+  body {
+    background-color: var(--bgc-body);
+  }
+
+  img {
+    border-radius: calc(var(--base-unit) / 1.5);
+  }
+
+  .card {
+    max-width: 64%;
+    margin: calc(var(--base-unit) * 5) auto;
+    border-radius: var(--base-unit);
+  }
+
+  .card__img-frame {
+    padding: calc(var(--base-unit) * 1.8) calc(var(--base-unit) * 1.8) 0;
+  }
+}
