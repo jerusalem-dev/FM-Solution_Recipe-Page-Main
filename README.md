@@ -20,10 +20,12 @@ I choose to style for desktop at first, but switched to mobile first in the fina
 
 When I wrote my markup, I used `<ul>` and `<ol>` elements for the lists. And after some research(I asked ChatGPT), I was able to line up the content in the `<li>` elements with the content in the `<h2>/<h3>` element and changed the color of the list marker. This worked out great for desktop, but not for mobile as seen below:
 
-The mobile design
+The mobile design:
+
 ![](./screenshot/mobile-design.png)
 
-My site in responsive mode
+My site in responsive mode:
+
 ![](./screenshot/list-styling.png)
 
 I was unable to find a way to achieve the designs using list elements. Eventually, I came up with a solution using `<div>` elements.
@@ -48,7 +50,7 @@ By setting the value to inside the markers were positioned in line with the prec
 
 This occurs because when the `list-style-position` is set to `inside`, the marker for each list item is aligned with the start of the list item's text content, which includes any margins applied to the preceding block-level element, in this case, the `<h2>/<h3>` element.
 
-Note: By default `<ul>` and `<ol>` elements have a `padding-inline-start: 40px;`. If this isn't reset the <li> elements will not line up with the <h2>/<h3> elements. They will be positioned further to the right.
+Note: By default `<ul>` and `<ol>` elements have a `padding-inline-start: 40px;`. If this isn't reset the `<li>` elements will not line up with the `<h2>/<h3>` elements. They will be positioned further to the right.
 
 The `::marker` sudo-element selector targets the marker of an `<li>` element in an ordered or unordered list allowing the marker(numbers or bullets) to be styled as seen in the example below:
 
