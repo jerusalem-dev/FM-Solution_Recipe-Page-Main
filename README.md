@@ -9,8 +9,8 @@
 
 ## Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://www.frontendmentor.io/solutions/solutionrecipepagemain-h9JBfTB0Fo)
+- Live Site URL: (https://jerusalem-dev.github.io/FM-Solution_Recipe-Page-Main/)
 
 ## My process
 
