@@ -18,7 +18,7 @@ Usually I'll choose a mobile first approach when writing my markup and styles. B
 
 I choose to style for desktop at first, but switched to mobile first in the final CSS. The layout and styling were simple enough. However, matching the lists in the designs was a challenge.
 
-When I wrote my markup, I used <ul> and <ol> elements for the lists. And after some research(I asked ChatGPT), I was able to line up the content in the <li> elements with the content in the <h2>/<h3> element and changed the color of the list marker. This worked out great for desktop, but not for mobile as seen below:
+When I wrote my markup, I used `<ul>` and `<ol>` elements for the lists. And after some research(I asked ChatGPT), I was able to line up the content in the `<li>` elements with the content in the `<h2>/<h3>` element and changed the color of the list marker. This worked out great for desktop, but not for mobile as seen below:
 
 The mobile design
 ![](./screenshot/mobile-design.png)
@@ -26,7 +26,7 @@ The mobile design
 My site in responsive mode
 ![](./screenshot/list-styling.png)
 
-I was unable to find a way to achieve the designs using list elements. Eventually, I came up with a solution using <div> elements.
+I was unable to find a way to achieve the designs using list elements. Eventually, I came up with a solution using `<div>` elements.
 
 ### Built with
 
@@ -42,15 +42,15 @@ The default value positions the marker further to the left of the h2/h3 element 
 
 ![](./screenshot/list-style-position-outside.png)
 
-By setting the value to inside the markers were positioned in line with the preceeding block-level element (<h2>/<h3>) as seen below:
+By setting the value to inside the markers were positioned in line with the preceeding block-level element (`<h2>/<h3>`) as seen below:
 
 ![](./screenshot/list-stlye-position-inside.png)
 
-This occurs because when the `list-style-position` is set to `inside`, the marker for each list item is aligned with the start of the list item's text content, which includes any margins applied to the preceding block-level element, in this case, the <h2>/<h3> element.
+This occurs because when the `list-style-position` is set to `inside`, the marker for each list item is aligned with the start of the list item's text content, which includes any margins applied to the preceding block-level element, in this case, the `<h2>/<h3>` element.
 
-Note: By default <ul> and <ol> elements have a `padding-inline-start: 40px;`. If this isn't reset the <li> elements will not line up with the <h2>/<h3> elements. They will be positioned further to the right.
+Note: By default `<ul>` and `<ol>` elements have a `padding-inline-start: 40px;`. If this isn't reset the <li> elements will not line up with the <h2>/<h3> elements. They will be positioned further to the right.
 
-The `::marker` sudo-element selector targets the marker of an <li> element in an ordered or unordered list allowing the marker(numbers or bullets) to be styled as seen in the example below:
+The `::marker` sudo-element selector targets the marker of an `<li>` element in an ordered or unordered list allowing the marker(numbers or bullets) to be styled as seen in the example below:
 
 ```css
 /* Changes the color of the bullets to red */
@@ -61,7 +61,7 @@ ul il::marker {
 
 ### Continued development
 
-While creating the lists using <div> elements worked, I would like to know if there is a way to match the designs using list(<ul>/<ol>) elements.
+While creating the lists using `<div>` elements worked, I would like to know if there is a way to match the designs using list(`<ul>/<ol>`) elements.
 
 ## Author
 
